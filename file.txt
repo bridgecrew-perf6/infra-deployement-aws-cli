@@ -1,0 +1,53 @@
+#!/bin/bash
+
+current_region=us-east-2
+az_a="${current_region}a"
+az_b="${current_region}b"
+
+# 1- Create a VPC
+2- Store VPC id in a variable $vpc_id
+
+# 3- Create an Internet Gateway
+4- Store Internet Gateway ID in a variable called $igw
+5- Associate Internet Gateway to VPC
+
+# 6- Create 2 Public Subnets in AZa and AZb
+7- Store subnet ids in variable $pub_sub_id_a and $pub_sub_id_b
+
+# 8- Create 2 Private Subnets in AZa and AZb
+9- Store subnet ids in variable $pri_sub_id_a and $pri_sub_id_b
+
+# 10- Create two Route Table.
+11- Store route table id in $pub_rt and $pri_rt
+12- Associate subnets in route table.
+
+# 13- Alocate Elastic IP.
+14- Store Elastic IP in a variable called $elastic_ip
+
+# 15 Create NAT Gateway in Public Subnet $pub_sub_id_a.
+16 Store NAT Gateway ID in $nat_gw
+
+# 17 Create Route to routetables.
+
+# 18 Create Security Group in $vpc_id for Bastian.
+19 Store security Group ID $sg_id_bastian
+
+# 20 create rules in security group for Bastian and open it for SSH Port 22 from anywhere.
+
+# 21 Create Security Group in $vpc_id for Webserver.
+22 Store security Group ID $sg_id_webserver
+
+#Install Bastian in Public Subnet $$pub_sub_id_b.
+
+# 23 Get Private of Bastian
+24 Store Private IP in $private_ip_bastian
+
+# 21 create rules in security group for Webserver and open it for SSH Port 22 from $private_ip_bastian
+Open port 80 for anywhere.
+
+# 18 Install Bastian in $pub_sub_id_b.
+Install Webserver_A in $pri_sub_id_a
+Install Webserver_B in $pri_sub_id_b
+
+
+
